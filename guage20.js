@@ -109,7 +109,7 @@ looker.plugins.visualizations.add({
       this.addError({
         group: 'measure-req',
         title: 'Incompatible Data',
-        message: 'One measure or one dimension is required'
+        message: 'One measure, one dimension, or one table calculation is required'
       });
       return false;
     } else {
@@ -305,7 +305,6 @@ looker.plugins.visualizations.add({
         return d.y
       })
       .curve(d3.curveCardinal);
-      //.interpolate("basis");
 
     pointerContainer.selectAll("path")
       .data([pointerPath])
