@@ -229,7 +229,7 @@ looker.plugins.visualizations.add({
       end = this.value_to_radians(this.config.zones[index].to);
       this.main.append("svg:path")
         .style("fill", color)
-        .attr("d", d3.svg.arc()
+        .attr("d", d3.arc()
           .startAngle(start)
           .endAngle(end)
           .innerRadius(0.75 * this.config.radius)
@@ -297,7 +297,7 @@ looker.plugins.visualizations.add({
 
     var pointerPath = this.buildPointerPath(midValue);
 
-    var pointerLine = d3.svg.line()
+    var pointerLine = d3.line()
       .x(function (d) {
         return d.x
       })
