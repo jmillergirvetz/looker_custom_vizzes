@@ -304,7 +304,8 @@ looker.plugins.visualizations.add({
       .y(function (d) {
         return d.y
       })
-      .interpolate("basis");
+      .curve(d3.curveCardinal);
+      //.interpolate("basis");
 
     pointerContainer.selectAll("path")
       .data([pointerPath])
